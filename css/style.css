@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+
+/* Start of Necessary overlay */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('../assets/Background.jpg') no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+h2 {
+    color: white;
+    padding-top: 5px;
+    margin-left: 10px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px, 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 50px;
+    padding-right: 50px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup  {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: #fff;
+    color: #162938;
+}
+
+/* End of Necessary overlay */
+
+.container {
+    padding-top: 20px;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%; /* Stretch the container over the whole screen */
+}
+
+.Piechart {
+    margin: 20px 0 20px 20px; /* Move the Piechart to the top left */
+    background-color: white; /* Set the background color */
+    border-radius: 15px; /* Set the border radius to create rounded corners */
+    padding: 20px; /* Add some padding to make it look nicer */
+    float: left; /* Float the Piechart to the left */
+    width: calc(45% - 40px); /* Set the width to half of the container minus padding */
+    /* Adjust width, padding, and margin as needed */
+}
+
+.Barchart {
+    margin: 20px 20px 0 0; /* Move the Barchart to the top right */
+    background-color: white; /* Set the background color */
+    border-radius: 15px; /* Set the border radius to create rounded corners */
+    padding: 20px; /* Add some padding to make it look nicer */
+    float: right; /* Float the Barchart to the right */
+    width: calc(45% - 40px); /* Set the width to half of the container minus padding */
+    /* Adjust width, padding, and margin as needed */
+}
+
+.Linechart {
+    clear: both; /* Clear the floats */
+    margin: 20px 0; /* Add margin at the top and bottom */
+    background-color: white; /* Set the background color */
+    border-radius: 15px; /* Set the border radius to create rounded corners */
+    padding: 50px; /* Add some padding to make it look nicer */
+    width: calc(100% - 40px); /* Set the width to half of the container minus padding */
+    height: 500px;
+    margin-left: 20px;
+}
+
+.chart-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.select{
+    font-size: 15px;
+    height: 40px;
+    width: 25%;
+    margin-top: -20px;
+}
+
