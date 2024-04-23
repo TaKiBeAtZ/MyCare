@@ -51,7 +51,7 @@
             <option value="O+"> O+ </option>
             <option value="O-"> O- </option>
         </select>
-
+        
         <label for="Allergies"> Allergies: </label>
         <select id="allergy" name="allergy" required>
             <option value=""> Select One </option>
@@ -146,6 +146,86 @@
             <option value="2.25"> 2.25 </option>
             <option value="2.3"> 2.3 </option>
             <option value="2.35"> 2.35 </option>
+        </select>
+
+        <label for="WhiteCellCount"> White Cell Count: </label>
+        <select id="WhiteCellCount" name="WhiteCellCount" required>
+            <option value=""> Select One </option>
+            <option value=""> 3 </option>
+            <option value=""> 4 </option>
+            <option value=""> 6 </option>
+            <option value=""> 8 </option>
+            <option value=""> 10 </option>
+            <option value=""> 12 </option>
+            <option value=""> 14 </option>
+            <option value=""> 16 </option>
+            <option value=""> 18 </option>
+            <option value=""> 20 </option>
+            <option value=""> 22 </option>
+            <option value=""> 24 </option>
+            <option value=""> 26 </option>
+        </select>
+
+        <label for="RedCellCount"> Red Cell Count: </label>
+        <select id="RedCellCount" name="RedCellCount" required>
+            <option value=""> Select One </option>
+            <option value=""> 3 </option>
+            <option value=""> 4 </option>
+            <option value=""> 6 </option>
+            <option value=""> 8 </option>
+            <option value=""> 10 </option>
+            <option value=""> 12 </option>
+            <option value=""> 14 </option>
+            <option value=""> 16 </option>
+            <option value=""> 18 </option>
+            <option value=""> 20 </option>
+            <option value=""> 22 </option>
+            <option value=""> 24 </option>
+            <option value=""> 26 </option>
+        </select>
+
+        <label for="Haemoglobin"> Haemoglobin Count: </label>
+        <select id="Haemoglobin" name="Haemoglobin" required>
+            <option value=""> Select One </option>
+            <option value=""> 80 </option>
+            <option value=""> 85 </option>
+            <option value=""> 90 </option>
+            <option value=""> 95 </option>
+            <option value=""> 100 </option>
+            <option value=""> 120 </option>
+            <option value=""> 150 </option>
+            <option value=""> 200 </option>
+            <option value=""> 250 </option>
+            <option value=""> 300 </option>
+        </select>
+
+        <label for="Sodium"> Sodium Count: </label>
+        <select id="Sodium" name="Sodium" required>
+            <option value=""> Select One </option>
+            <option value=""> 140 </option>
+            <option value=""> 141 </option>
+            <option value=""> 142 </option>
+            <option value=""> 143 </option>
+            <option value=""> 144 </option>
+            <option value=""> 145 </option>
+            <option value=""> 146 </option>
+            <option value=""> 147 </option>
+            <option value=""> 148 </option>
+            <option value=""> 149 </option>
+            <option value=""> 150 </option>
+           
+        </select>
+
+        <label for="Calcium"> Calcium Count: </label>
+        <select id="Calcium" name="Calcium" required>
+            <option value=""> Select One </option>
+            <option value=""> 2.0 </option>
+            <option value=""> 2.5 </option>
+            <option value=""> 2.10 </option>
+            <option value=""> 2.15 </option>
+            <option value=""> 2.20 </option>
+            <option value=""> 2.30 </option>
+            <option value=""> 2.35 </option>
         </select>
 
         <button type="submit">Submit</button>
