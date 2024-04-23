@@ -10,11 +10,6 @@ document.getElementById("healthForm").addEventListener("submit", function(event)
             healthIssues: document.getElementById("healthIssues").value
         };
 
-        // Do something with the form data, for example, send it to a server
-        console.log(formData);
-
-        // You can add further processing here, like validation or sending data to a server
-
         // Reset the form
         this.reset();
     });

@@ -2,13 +2,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const ctx = document.getElementById('Barchart').getContext('2d');
     let Barchart;
     function updateChartData(selectedYear) {
-        fetch(`data.json`)
-            .then(response => response.json())
-            .then(data => {
-                Barchart.data.datasets[0].data = data[selectedYear];
-                Barchart.update(); 
-            })
-            .catch(error => console.error('Error updating chart data:', error));
+        let formData = new FormData();
+        formData.append('selectedYear', selectedYear);
+    
+        fetch('fetch_data.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Update chart data
+            Barchart.data.datasets[0].data = data;
+            Barchart.update(); // Redraw the chart
+        })
+        .catch(error => console.error('Error updating chart data:', error));
     }
 
     const selectElement = document.getElementById('bar');
@@ -21,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
     Barchart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['WCC', 'RCC', 'HBGL', 'HCT', 'MCVU', 'MCH', 'MCGL', 'RDWU', 'PLT', 'MPVU', 'NE', 'LY', 'MO', 'EO', 'BA', 'NA', 'K', 'URE', 'CREA', 'GFR', 'BILI', 'ALP', 'ALT', 'ALB', 'CA', 'CCA', 'PHOS', 'CRP', 'MG', 'GLU', 'HTRT', 'KAPPA', 'LAMB', 'KLRA', 'IgA', 'IgG', 'IgM', 'PROT', 'LDH', 'SB2M'],
+            // labels: ['WCC', 'RCC', 'HBGL', 'HCT', 'MCVU', 'MCH', 'MCGL', 'RDWU', 'PLT', 'MPVU', 'NE', 'LY', 'MO', 'EO', 'BA', 'NA', 'K', 'URE', 'CREA', 'GFR', 'BILI', 'ALP', 'ALT', 'ALB', 'CA', 'CCA', 'PHOS', 'CRP', 'MG', 'GLU', 'HTRT', 'KAPPA', 'LAMB', 'KLRA', 'IgA', 'IgG', 'IgM', 'PROT', 'LDH', 'SB2M'],
+            labels: [],
             datasets: [{
                 label: 'value: ',
                 data: [],
