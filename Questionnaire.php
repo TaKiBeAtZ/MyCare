@@ -62,8 +62,8 @@
         <label for="healthIssues">Any current health issues? (If yes, please specify)</label>
         <textarea id="healthIssues" name="healthIssues"></textarea>
 
-        <label for="WhiteCell"> White Cell Count: </label>
-        <select id="WhiteCell" name="WhiteCell" required>
+        <label for="WhiteCellCount"> White Cell Count: </label>
+        <select id="WhiteCellCount" name="WhiteCellCount" required>
             <option value=""> Select One </option>
             <option value=""> 3 </option>
             <option value=""> 4 </option>
