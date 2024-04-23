@@ -4,15 +4,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to update chart data
     function updateChartData(selectedYear) {
-        // Fetch data based on the selected year (assuming data is fetched dynamically)
-        fetch(`data.json`)
-            .then(response => response.json())
-            .then(data => {
-                // Update chart data
-                Linechart.data.datasets[0].data = data[selectedYear];
-                Linechart.update(); // Redraw the chart
-            })
-            .catch(error => console.error('Error updating chart data:', error));
+        let formData = new FormData();
+        formData.append('selectedYear', selectedYear);
+    
+        fetch('fetch_data.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Update chart data
+            Linechart.data.datasets[0].data = data;
+            Linechart.update(); // Redraw the chart
+        })
+        .catch(error => console.error('Error updating chart data:', error));
     }
 
     // Get a reference to the select element
@@ -22,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
     selectElement.addEventListener('change', function() {
         // Get the selected value
         const selectedYear = this.value;
-
         // Update chart data based on the selected year
         updateChartData(selectedYear);
     });
@@ -31,7 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
     Linechart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['WCC', 'RCC', 'HBGL', 'HCT', 'MCVU', 'MCH', 'MCGL', 'RDWU', 'PLT', 'MPVU', 'NE', 'LY', 'MO', 'EO', 'BA', 'NA', 'K', 'URE', 'CREA', 'GFR', 'BILI', 'ALP', 'ALT', 'ALB', 'CA', 'CCA', 'PHOS', 'CRP', 'MG', 'GLU', 'HTRT', 'KAPPA', 'LAMB', 'KLRA', 'IgA', 'IgG', 'IgM', 'PROT', 'LDH', 'SB2M'],
+            // labels: ['WCC', 'RCC', 'HBGL', 'HCT', 'MCVU', 'MCH', 'MCGL', 'RDWU', 'PLT', 'MPVU', 'NE', 'LY', 'MO', 'EO', 'BA', 'NA', 'K', 'URE', 'CREA', 'GFR', 'BILI', 'ALP', 'ALT', 'ALB', 'CA', 'CCA', 'PHOS', 'CRP', 'MG', 'GLU', 'HTRT', 'KAPPA', 'LAMB', 'KLRA', 'IgA', 'IgG', 'IgM', 'PROT', 'LDH', 'SB2M'],
+            labels: [],
             datasets: [{
                 label: 'value: ',
                 data: [],
