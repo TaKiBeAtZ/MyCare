@@ -3,12 +3,6 @@ body, html {
     padding: 0;
     height: 200%;
     font-family: Arial, sans-serif;
-    /*
-    background-image: url('Background.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-size: 200%;
-    */
   }
   
   .menu-bar {

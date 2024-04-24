@@ -103,8 +103,8 @@ header {
 }
 
 .rounded-paragraph {
-    background-color: white; /* Set the background color */
-    border-radius: 15px; /* Set the border radius to create rounded corners */
-    padding: 20px; /* Add some padding to make it look nicer */
+    background-color: white; 
+    border-radius: 15px; 
+    padding: 20px; 
     padding-right: 20px;
 }

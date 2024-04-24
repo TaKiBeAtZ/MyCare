@@ -99,36 +99,34 @@ header {
     position: relative;
     left: 0;
     top: 0;
-    width: 100%; /* Stretch the container over the whole screen */
+    width: 100%;
 }
 
 .Piechart {
-    margin: 20px 0 20px 20px; /* Move the Piechart to the top left */
-    background-color: white; /* Set the background color */
-    border-radius: 15px; /* Set the border radius to create rounded corners */
-    padding: 20px; /* Add some padding to make it look nicer */
-    float: left; /* Float the Piechart to the left */
-    width: calc(45% - 40px); /* Set the width to half of the container minus padding */
-    /* Adjust width, padding, and margin as needed */
+    margin: 20px 0 20px 20px; 
+    background-color: white; 
+    border-radius: 15px; 
+    padding: 20px; 
+    float: left; 
+    width: calc(45% - 40px); 
 }
 
 .Barchart {
-    margin: 20px 20px 0 0; /* Move the Barchart to the top right */
-    background-color: white; /* Set the background color */
-    border-radius: 15px; /* Set the border radius to create rounded corners */
-    padding: 20px; /* Add some padding to make it look nicer */
-    float: right; /* Float the Barchart to the right */
-    width: calc(45% - 40px); /* Set the width to half of the container minus padding */
-    /* Adjust width, padding, and margin as needed */
+    margin: 20px 20px 0 0; 
+    background-color: white; 
+    border-radius: 15px; 
+    padding: 20px; 
+    float: right; 
+    width: calc(45% - 40px); 
 }
 
 .Linechart {
-    clear: both; /* Clear the floats */
-    margin: 20px 0; /* Add margin at the top and bottom */
-    background-color: white; /* Set the background color */
-    border-radius: 15px; /* Set the border radius to create rounded corners */
-    padding: 50px; /* Add some padding to make it look nicer */
-    width: calc(100% - 40px); /* Set the width to half of the container minus padding */
+    clear: both; 
+    margin: 20px 0; 
+    background-color: white; 
+    border-radius: 15px; 
+    padding: 50px; 
+    width: calc(100% - 40px); 
     height: 500px;
     margin-left: 20px;
 }
