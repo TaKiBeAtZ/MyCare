@@ -21,7 +21,6 @@ def generate_graphs(data):
     Parameters:
         data (DataFrame): Pandas DataFrame containing the data.
     """
-    # Example graphs, you can modify these or add more as per your requirement
     # Graph 1: Histogram of Age
     plt.figure(figsize=(10, 6))
     sns.histplot(data['Age'], bins=20, kde=True, color='skyblue')
@@ -49,6 +48,6 @@ def generate_graphs(data):
 
 # Example usage
 if __name__ == "__main__":
-    file_path = 'healthcare_data.csv'  # Replace with the path to your CSV file
+    file_path = 'healthcare_data.csv' 
     data = read_data(file_path)
     generate_graphs(data)
