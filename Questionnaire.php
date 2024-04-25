@@ -39,34 +39,6 @@
             <option value="other">Other</option>
         </select>
 
-        <label for="bloodType"> Blood Type: </label>
-        <select id="blood" name="blood" required>
-            <option value=""> Select One </option>
-            <option value="A+"> A+ </option>
-            <option value="A-"> A- </option>
-            <option value="B+"> B+ </option>
-            <option value="B-"> B- </option>
-            <option value="AB+"> AB+ </option>
-            <option value="AB-"> AB- </option>
-            <option value="O+"> O+ </option>
-            <option value="O-"> O- </option>
-        </select>
-        
-        <label for="Allergies"> Allergies: </label>
-        <select id="allergy" name="allergy" required>
-            <option value=""> Select One </option>
-            <option value="Food Allergies"> Food Allergies </option>
-            <option value="Pet Allergies"> Pet Allergies </option>
-            <option value="Insect Sting Allergies"> Insect Sting Allergies </option>
-            <option value="Drug Allergies"> Drug Allergies </option>
-            <option value="Pollen Allergies"> Pollen Allergies </option>
-            <option value="Latex Allergies"> Latex Allergies </option>
-            <option value="Mold Allergies"> Mold Allergies </option>
-        </select>
-
-        <label for="healthIssues">Any current health issues? (If yes, please specify)</label>
-        <textarea id="healthIssues" name="healthIssues" style="padding: 10px; width:100%"></textarea>
-
         <label for="WhiteCell"> White Cell Count: </label>
         <select id="WhiteCell" name="whiteCell" required>
             <option value=""> Select One </option>
